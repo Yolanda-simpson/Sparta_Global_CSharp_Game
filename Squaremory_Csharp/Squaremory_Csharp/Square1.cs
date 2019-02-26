@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Squaremory_Csharp
 {
-    class Square1
+    public class Square1
     {
 
 
     }
+
 
 }
