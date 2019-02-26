@@ -66,6 +66,8 @@
 
         </Grid>
         <Button x:Name="startbtn" Content="Start" HorizontalAlignment="Left" Height="51" Margin="116,10,0,0" VerticalAlignment="Top" Width="133" Click="Startbtn_Click_1"/>
+        <Label Content="Time" HorizontalAlignment="Left" Height="51" Margin="439,10,0,0" VerticalAlignment="Top" Width="94" FontSize="22"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="556,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
