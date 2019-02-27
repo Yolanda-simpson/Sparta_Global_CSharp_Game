@@ -31,6 +31,7 @@ namespace Squaremory_Csharp
         Button b4;
         Button[] blackButtons;
 
+
         public MainWindow()
         {
             InitializeComponent();
@@ -44,7 +45,7 @@ namespace Squaremory_Csharp
             cd.Interval = TimeSpan.FromSeconds(1);
             cd.Tick += myTimer_Tick;
             cd.Start();
-            
+
             Random rn = new Random();
             int x = rn.Next(36);
             int y = rn.Next(36);
@@ -62,18 +63,14 @@ namespace Squaremory_Csharp
             b3.Background = Brushes.Black;
             b4.Background = Brushes.Black;
 
-            
 
-            //if (increment == 10)
-            //{ 
 
-            //    b1.Background = Brushes.White;
-            //    b2.Background = Brushes.White;
-            //    b3.Background = Brushes.White;
-            //    b4.Background = Brushes.White;
-            //}
+           
 
         }
+
+        
+
         public Button getGridChild(int r, int c)
         {
             for (int i = 0; i < grid.Children.Count; i++)
@@ -105,206 +102,204 @@ namespace Squaremory_Csharp
            
 
             txttimer.Text = increment.ToString();
-            
+           
         }
+
+    
 
         private void changeBlockColour()
         {
 
 
         }
-        private void blockScore()
+        private void blockScore(string btnName)
         {
-            score = score + 20;
-            score1.Text = score.ToString();
+            for (int i = 0; i < blackButtons.Length; i++)
+            {
+                if (blackButtons[i].Name == btnName)
+                {
+                    score = score + 20;
+                    score1.Text = score.ToString();
+
+                    blackButtons[i].Background = Brushes.Black;
+                   
+                }
+                
+                
+            }
+            
         }
 
         private void Btn1_Click(object sender, RoutedEventArgs e)
         {
-           
 
-            //btn1.Click += Btn1_Click;
-            btn1.Background = Brushes.Black;
-
-            blockScore();
-            //btn1.Background = Brushes.Black;
+            blockScore("btn1");
 
         }
         private void Btn2_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn2");
         }
         private void Btn3_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn3");
         }
         private void Btn4_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn4");
         }
         private void Btn5_Click(object sender, RoutedEventArgs e)
         {
+            blockScore("btn5");
 
-            // btn5.Click += Btn5_Click;
-            //btn5.Background = Brushes.White;
-            blockScore();
-
-            // btn5.Background = Brushes.Black;
         }
 
         private void Btn6_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+
+            blockScore("btn6");
         }
         private void Btn7_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn7");
         }
         private void Btn8_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn8");
         }
         private void Btn9_Click(object sender, RoutedEventArgs e)
         {
 
-            blockScore();
-            btn9.Background = Brushes.White;
-
-
-            // btn9.Background = Brushes.Transparent;
+            blockScore("btn9");
         }
         private void Btn10_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn10");
         }
         private void Btn11_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn11");
         }
          private void Btn12_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn12");
         }
         private void Btn13_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn13");
         }
 
         private void Btn14_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn14");
         }
 
         private void Btn15_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
-
-
-            //btn15.Background = Brushes.Black;
-
+            blockScore("btn15");
         }
 
         private void Btn16_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn16");
         }
 
         private void Btn17_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn17");
         }
 
         private void Btn18_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn18");
         }
 
         private void Btn19_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn19");
         }
 
         private void Btn20_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn20");
         }
 
         private void Btn21_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn21");
         }
 
         private void Btn22_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn22");
         }
 
         private void Btn23_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn23");
         }
 
         private void Btn24_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn24");
         }
 
         private void Btn25_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn25");
         }
 
         private void Btn26_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn26");
         }
         private void Btn27_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn27");
         }
         private void Btn28_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn28");
         }
 
         private void Btn29_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn29");
         }
 
         private void Btn30_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn30");
         }
 
         private void Btn31_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn31");
         }
 
         private void Btn32_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn32");
         }
 
         private void Btn33_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn33");
         }
 
         private void Btn34_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn34");
         }
 
         private void Btn35_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn35");
         }
 
         private void Btn36_Click(object sender, RoutedEventArgs e)
         {
-            blockScore();
+            blockScore("btn36");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
