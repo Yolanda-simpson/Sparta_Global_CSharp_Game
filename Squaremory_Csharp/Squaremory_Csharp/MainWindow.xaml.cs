@@ -25,6 +25,12 @@ namespace Squaremory_Csharp
         DispatcherTimer cd = new DispatcherTimer();
         int score = 0;
 
+        Button b1;
+        Button b2;
+        Button b3;
+        Button b4;
+        Button[] blackButtons;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -45,16 +51,28 @@ namespace Squaremory_Csharp
             int z = rn.Next(36);
             int a = rn.Next(36);
 
-            Button b1 = (Button)grid.Children[x];
-            Button b2 = (Button)grid.Children[y];
-            Button b3 = (Button)grid.Children[z];
-            Button b4 = (Button)grid.Children[a];
+            b1 = (Button)grid.Children[x];
+            b2 = (Button)grid.Children[y];
+            b3 = (Button)grid.Children[z];
+            b4 = (Button)grid.Children[a];
+            blackButtons = new Button[4] { b1, b2, b3, b4 };
 
             b1.Background = Brushes.Black;
             b2.Background = Brushes.Black;
             b3.Background = Brushes.Black;
             b4.Background = Brushes.Black;
+
             
+
+            //if (increment == 10)
+            //{ 
+
+            //    b1.Background = Brushes.White;
+            //    b2.Background = Brushes.White;
+            //    b3.Background = Brushes.White;
+            //    b4.Background = Brushes.White;
+            //}
+
         }
         public Button getGridChild(int r, int c)
         {
@@ -64,10 +82,12 @@ namespace Squaremory_Csharp
                 if (Grid.GetRow(e) == r && Grid.GetColumn(e) == c)
                     return e;
             }
+
             return null;
+
         }
 
-        private int increment = 16;
+        private int increment = 6;
         
         public void myTimer_Tick(object sender, EventArgs e)
         {
@@ -76,15 +96,13 @@ namespace Squaremory_Csharp
             if (increment == 0)
             {
                 cd.Stop();
-                MessageBox.Show("game over");
+                b1.Background = Brushes.Transparent;
+                b2.Background = Brushes.Transparent;
+                b3.Background = Brushes.Transparent;
+                b4.Background = Brushes.Transparent;
+                MessageBox.Show("now click the squares you remember:" ,"Time to remember the squares" );
             }
-            if (increment == 10)
-            {
-                b1.Background = Brushes.White;
-                b2.Background = Brushes.White;
-                b3.Background = Brushes.White;
-                b4.Background = Brushes.White;
-            }
+           
 
             txttimer.Text = increment.ToString();
             
@@ -92,9 +110,8 @@ namespace Squaremory_Csharp
 
         private void changeBlockColour()
         {
-            
-            
-           
+
+
         }
         private void blockScore()
         {
@@ -107,7 +124,7 @@ namespace Squaremory_Csharp
            
 
             //btn1.Click += Btn1_Click;
-            //btn1.Background = Brushes.White;
+            btn1.Background = Brushes.Black;
 
             blockScore();
             //btn1.Background = Brushes.Black;
@@ -288,6 +305,11 @@ namespace Squaremory_Csharp
         private void Btn36_Click(object sender, RoutedEventArgs e)
         {
             blockScore();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(b1.Name+" "+b2.Name+" "+b3.Name+" "+b4.Name);
         }
     }
 }

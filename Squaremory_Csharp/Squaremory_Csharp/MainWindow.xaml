@@ -24,42 +24,186 @@
                 <RowDefinition Height=" *"></RowDefinition>
                 <RowDefinition Height=" *"></RowDefinition>
             </Grid.RowDefinitions>
-            <Button  Name="btn1" Grid.Row="0" Grid.Column="0"  Click="Btn1_Click"></Button>
-            <Button Name="btn2" Grid.Row="1" Grid.Column="0" Click="Btn2_Click"></Button>
-            <Button Name="btn3" Grid.Row="2" Grid.Column="0" Click="Btn3_Click"></Button>
-            <Button Name="btn4" Grid.Row="3" Grid.Column="0" Click="Btn4_Click"></Button>
-            <Button Name="btn5" Grid.Row="4" Grid.Column="0" Click="Btn5_Click"></Button>
-            <Button Name="btn6" Grid.Row="5" Grid.Column="0" Click="Btn6_Click"></Button>
-            <Button Name="btn7" Grid.Row="0" Grid.Column="1" Click="Btn7_Click"></Button>
-            <Button Name="btn8" Grid.Row="1" Grid.Column="1" Click="Btn8_Click"></Button>
-            <Button Name="btn9" Grid.Row="2" Grid.Column="1" Click="Btn9_Click"></Button>
-            <Button Name="btn10" Grid.Row="3" Grid.Column="1" Click="Btn10_Click"></Button>
-            <Button Name="btn11" Grid.Row="4" Grid.Column="1" Click="Btn11_Click"></Button>
-            <Button Name="btn12" Grid.Row="5" Grid.Column="1" Click="Btn12_Click"></Button>
-            <Button Name="btn13" Grid.Row="0" Grid.Column="2" Click="Btn13_Click"></Button>
-            <Button Name="btn14" Grid.Row="1" Grid.Column="2" Click="Btn14_Click"></Button>
-            <Button Name="btn15" Grid.Row = "2" Grid.Column="2" Click="Btn15_Click"></Button>
-            <Button Name="btn16" Grid.Row="3" Grid.Column="2" Click="Btn16_Click"></Button>
-            <Button Name="btn17" Grid.Row="4" Grid.Column="2" Click="Btn17_Click"></Button>
-            <Button Name="btn18" Grid.Row="5" Grid.Column="2" Click="Btn18_Click"></Button>
-            <Button Name="btn19" Grid.Row="0" Grid.Column="3" Click="Btn19_Click"></Button>
-            <Button Name="btn20" Grid.Row="1" Grid.Column="3" Click="Btn20_Click"></Button>
-            <Button Name="btn21" Grid.Row = "2" Grid.Column="3" Click="Btn21_Click"></Button>
-            <Button Name="btn22" Grid.Row="3" Grid.Column="3" Click="Btn22_Click"></Button>
-            <Button Name="btn23" Grid.Row="4" Grid.Column="3" Click="Btn23_Click"></Button>
-            <Button Name="btn24" Grid.Row="5" Grid.Column="3" Click="Btn24_Click"></Button>
-            <Button Name="btn25" Grid.Row="0" Grid.Column="4" Click="Btn25_Click"></Button>
-            <Button Name="btn26" Grid.Row="1" Grid.Column="4" Click="Btn26_Click"></Button>
-            <Button Name="btn27" Grid.Row = "2" Grid.Column="4" Click="Btn27_Click" ></Button>
-            <Button Name="btn28" Grid.Row="3" Grid.Column="4" Click="Btn28_Click"></Button>
-            <Button Name="btn29" Grid.Row="4" Grid.Column="4" Click="Btn29_Click"></Button>
-            <Button Name="btn30" Grid.Row="5" Grid.Column="4" Click="Btn30_Click"></Button>
-            <Button Name="btn31" Grid.Row="0" Grid.Column="5" Click="Btn31_Click"></Button>
-            <Button Name="btn32" Grid.Row="1" Grid.Column="5" Click="Btn32_Click"></Button>
-            <Button Name="btn33" Grid.Row = "2" Grid.Column="5" Click="Btn33_Click"></Button>
-            <Button Name="btn34" Grid.Row="3" Grid.Column="5" Click="Btn34_Click"></Button>
-            <Button Name="btn35" Grid.Row="4" Grid.Column="5" Click="Btn35_Click"></Button>
-            <Button Name="btn36" Grid.Row="5" Grid.Column="5" Click="Btn36_Click"></Button>
+            <Button  Name="btn1" Grid.Row="0" Grid.Column="0"  Click="Btn1_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn2" Grid.Row="1" Grid.Column="0" Click="Btn2_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn3" Grid.Row="2" Grid.Column="0" Click="Btn3_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn4" Grid.Row="3" Grid.Column="0" Click="Btn4_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn5" Grid.Row="4" Grid.Column="0" Click="Btn5_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn6" Grid.Row="5" Grid.Column="0" Click="Btn6_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn7" Grid.Row="0" Grid.Column="1" Click="Btn7_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn8" Grid.Row="1" Grid.Column="1" Click="Btn8_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn9" Grid.Row="2" Grid.Column="1" Click="Btn9_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn10" Grid.Row="3" Grid.Column="1" Click="Btn10_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn11" Grid.Row="4" Grid.Column="1" Click="Btn11_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn12" Grid.Row="5" Grid.Column="1" Click="Btn12_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn13" Grid.Row="0" Grid.Column="2" Click="Btn13_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn14" Grid.Row="1" Grid.Column="2" Click="Btn14_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn15" Grid.Row = "2" Grid.Column="2" Click="Btn15_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn16" Grid.Row="3" Grid.Column="2" Click="Btn16_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn17" Grid.Row="4" Grid.Column="2" Click="Btn17_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn18" Grid.Row="5" Grid.Column="2" Click="Btn18_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn19" Grid.Row="0" Grid.Column="3" Click="Btn19_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn20" Grid.Row="1" Grid.Column="3" Click="Btn20_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn21" Grid.Row = "2" Grid.Column="3" Click="Btn21_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn22" Grid.Row="3" Grid.Column="3" Click="Btn22_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn23" Grid.Row="4" Grid.Column="3" Click="Btn23_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn24" Grid.Row="5" Grid.Column="3" Click="Btn24_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn25" Grid.Row="0" Grid.Column="4" Click="Btn25_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn26" Grid.Row="1" Grid.Column="4" Click="Btn26_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn27" Grid.Row = "2" Grid.Column="4" Click="Btn27_Click" >
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn28" Grid.Row="3" Grid.Column="4" Click="Btn28_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn29" Grid.Row="4" Grid.Column="4" Click="Btn29_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn30" Grid.Row="5" Grid.Column="4" Click="Btn30_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn31" Grid.Row="0" Grid.Column="5" Click="Btn31_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn32" Grid.Row="1" Grid.Column="5" Click="Btn32_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn33" Grid.Row = "2" Grid.Column="5" Click="Btn33_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn34" Grid.Row="3" Grid.Column="5" Click="Btn34_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn35" Grid.Row="4" Grid.Column="5" Click="Btn35_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button Name="btn36" Grid.Row="5" Grid.Column="5" Click="Btn36_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
 
 
 
@@ -68,8 +212,9 @@
         <Button x:Name="startbtn" Content="Start" HorizontalAlignment="Left" Height="51" Margin="23,8,0,0" VerticalAlignment="Top" Width="133" Click="Startbtn_Click_1"/>
         <Label Content="Time" HorizontalAlignment="Left" Height="51" Margin="529,10,0,0" VerticalAlignment="Top" Width="94" FontSize="22"/>
         <TextBox x:Name="txttimer" Text="" HorizontalAlignment="Center" Height="35" Margin="661,13,33.6,0"  VerticalAlignment="Top" Width="99" FontSize="24" RenderTransformOrigin="0.866,0.942"/>
-        <TextBox x:Name="score1" HorizontalAlignment="Left" Height="46" Margin="310,15,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="112" FontSize="22"/>
+        <TextBox x:Name="score1" HorizontalAlignment="Left" Height="46" Margin="255,15,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="112" FontSize="22"/>
         <Label Content="Score" HorizontalAlignment="Left" Height="35" Margin="202,13,0,0" VerticalAlignment="Top" Width="140" FontSize="18"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="427,13,0,0" VerticalAlignment="Top" Width="68" Click="Button_Click"/>
 
     </Grid>
 </Window>
