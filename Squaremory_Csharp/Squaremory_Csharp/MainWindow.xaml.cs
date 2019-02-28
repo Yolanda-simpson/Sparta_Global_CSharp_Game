@@ -36,8 +36,12 @@ namespace Squaremory_Csharp
         Button[] blackButtons;
         Button[,] SquareArray;
         BitmapImage[] squareimages;
-        
 
+
+        Image img = new Image();
+        Image img2 = new Image();
+        Image img3 = new Image();
+        Image img4 = new Image();
 
         public MainWindow()
         {
@@ -95,11 +99,13 @@ namespace Squaremory_Csharp
 
 
         //}
-          
-        
-        
+       
+
+
+
         private void Startbtn_Click_1(object sender, RoutedEventArgs e)
         {
+            
             cd.Interval = TimeSpan.FromSeconds(1);
             cd.Tick += myTimer_Tick;
             cd.Start();
@@ -116,15 +122,26 @@ namespace Squaremory_Csharp
             b4 = (Button)grid.Children[a];
             blackButtons = new Button[4] { b1, b2, b3, b4 };
 
-            b1.Background = Brushes.Black;
-            b2.Background = Brushes.Black;
-            b3.Background = Brushes.Black;
-            b4.Background = Brushes.Black;
+            //b1.Background = Brushes.Black;
+            //b2.Background = Brushes.Black;
+           // b3.Background = Brushes.Black;
+            //b4.Background = Brushes.Black;
 
-            //b1.Image = Image.FromFile("squares1.jpg");
+            
+            img.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square1.png"));
+            img2.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square1.2.png"));
+            img3.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square1.3.png"));
+            img4.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square1.4.png"));
+            b1.Content = img;
+            b2.Content = img2;
+            b3.Content = img3;
+            b4.Content = img4;
+
+
+
         }
 
-        
+
 
         public Button getGridChild(int r, int c)
         {
@@ -148,10 +165,10 @@ namespace Squaremory_Csharp
             if (increment == 0)
             {
                 cd.Stop();
-                b1.Background = Brushes.Transparent;
-                b2.Background = Brushes.Transparent;
-                b3.Background = Brushes.Transparent;
-                b4.Background = Brushes.Transparent;
+                img.Visibility = Visibility.Collapsed;
+                img2.Visibility = Visibility.Collapsed;
+                img3.Visibility = Visibility.Collapsed;
+                img4.Visibility = Visibility.Collapsed;
                 MessageBox.Show("now click the squares you remember:" ,"Time to remember the squares" );
                 
             }
@@ -173,7 +190,10 @@ namespace Squaremory_Csharp
         {
             if (errorcount == 3)
             {
-                MessageBox.Show("game oover");
+                MessageBox.Show("Game Over", "Game Over");
+                
+                this.Close();
+               
             }
             var window1 = new Window1();
             for (int i = 0; i < blackButtons.Length; i++)
@@ -186,15 +206,16 @@ namespace Squaremory_Csharp
                     score = score + 20;
                     score1.Text = score.ToString();
 
-                    blackButtons[i].Background = Brushes.Black;
+                    blackButtons[i].Background = Brushes.Purple;
                     playSimpleSound();
 
                 }
                 else if (incorrect)
                 {
                     errorcount++;
-                    MessageBox.Show("Incorrect", "Wrong Square Clicked");
+                    MessageBox.Show( "Incorrect",  "Wrong Square Clicked");
                     break;
+
                     
                 }
 

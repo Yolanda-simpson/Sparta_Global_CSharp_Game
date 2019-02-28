@@ -39,6 +39,7 @@
                 <Button.Background>
                     <ImageBrush/>
                 </Button.Background>
+                
             </Button>
             <Button Name="btn3" Grid.Row="2" Grid.Column="0" Click="Btn3_Click">
                 <Button.Background>
