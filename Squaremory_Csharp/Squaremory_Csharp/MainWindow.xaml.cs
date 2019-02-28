@@ -34,8 +34,7 @@ namespace Squaremory_Csharp
         Button b3;
         Button b4;
         Button[] blackButtons;
-        Button[,] SquareArray;
-        BitmapImage[] squareimages;
+       
 
 
         Image img = new Image();
@@ -52,53 +51,7 @@ namespace Squaremory_Csharp
 
         }
 
-        //public void squareimg()
-        //{
-        //    SquareArray = new Button [6,6];
-        //    SquareArray[0, 0] = btn1;
-        //    SquareArray[0, 1] = btn2;
-        //    SquareArray[0, 2] = btn3;
-        //    SquareArray[0, 3] = btn4;
-        //    SquareArray[0, 4] = btn5;
-        //    SquareArray[0, 5] = btn6;
-        //    SquareArray[1, 0] = btn7;
-        //    SquareArray[1, 1] = btn8;
-        //    SquareArray[1, 2] = btn9;
-        //    SquareArray[1, 3] = btn10;
-        //    SquareArray[1, 4] = btn11;
-        //    SquareArray[1, 5] = btn12;
-        //    SquareArray[2, 0] = btn13;
-        //    SquareArray[2, 1] = btn14;
-        //    SquareArray[2, 2] = btn15;
-        //    SquareArray[2, 3] = btn16;
-        //    SquareArray[2, 4] = btn17;
-        //    SquareArray[2, 5] = btn18;
-        //    SquareArray[3, 0] = btn19;
-        //    SquareArray[3, 1] = btn20;
-        //    SquareArray[3, 2] = btn21;
-        //    SquareArray[3, 3] = btn22;
-        //    SquareArray[3, 4] = btn23;
-        //    SquareArray[3, 5] = btn24;
-        //    SquareArray[4, 0] = btn25;
-        //    SquareArray[4, 1] = btn26;
-        //    SquareArray[4, 2] = btn27;
-        //    SquareArray[4, 3] = btn28;
-        //    SquareArray[4, 4] = btn29;
-        //    SquareArray[4, 5] = btn30;
-        //    SquareArray[5, 0] = btn31;
-        //    SquareArray[5, 1] = btn32;
-        //    SquareArray[5, 2] = btn33;
-        //    SquareArray[5, 3] = btn34;
-        //    SquareArray[5, 4] = btn35;
-        //    SquareArray[5, 5] = btn36;
-
-        //    squareimages = new BitmapImage[1];
-        //    squareimages[0] = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\square1"));
-
-
-
-
-        //}
+      
        
 
 
@@ -121,11 +74,6 @@ namespace Squaremory_Csharp
             b3 = (Button)grid.Children[z];
             b4 = (Button)grid.Children[a];
             blackButtons = new Button[4] { b1, b2, b3, b4 };
-
-            //b1.Background = Brushes.Black;
-            //b2.Background = Brushes.Black;
-           // b3.Background = Brushes.Black;
-            //b4.Background = Brushes.Black;
 
             
             img.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square1.png"));
@@ -169,7 +117,7 @@ namespace Squaremory_Csharp
                 img2.Visibility = Visibility.Collapsed;
                 img3.Visibility = Visibility.Collapsed;
                 img4.Visibility = Visibility.Collapsed;
-                MessageBox.Show("now click the squares you remember:" ,"Time to remember the squares" );
+                MessageBox.Show("Now click the squares you remember:" ,"Time to remember the squares" );
                 
             }
 
@@ -223,7 +171,7 @@ namespace Squaremory_Csharp
                 
                 if (score == 80)
                 {
-                    MessageBox.Show("congratulations you found the squares");
+                    MessageBox.Show("congratulations you found the squares", "Congratuations");
                  
                        window1.Show();
                        this.Hide();
@@ -409,10 +357,7 @@ namespace Squaremory_Csharp
             blockScore("btn36");
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(b1.Name+" "+b2.Name+" "+b3.Name+" "+b4.Name);
-        }
+     
     }
 }
       

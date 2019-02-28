@@ -10,27 +10,43 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Media;
+using System.IO;
+
 
 namespace Squaremory_Csharp
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class Window1 : Window
     {
         DispatcherTimer cd = new DispatcherTimer();
         int score = 0;
+        int errorcount = 0;
 
 
         Button b1;
         Button b2;
         Button b3;
         Button b4;
+        Button b5;
+        Button b6;
+        Button b7;
         Button[] blackButtons;
-       
 
+
+
+        Image img = new Image();
+        Image img2 = new Image();
+        Image img3 = new Image();
+        Image img4 = new Image();
+        Image img5 = new Image();
+        Image img6 = new Image();
+        Image img7 = new Image();
 
         public Window1()
         {
@@ -40,11 +56,11 @@ namespace Squaremory_Csharp
 
 
         }
-       
-  
+
 
         private void Startbtn_Click_1(object sender, RoutedEventArgs e)
         {
+
             cd.Interval = TimeSpan.FromSeconds(1);
             cd.Tick += myTimer_Tick;
             cd.Start();
@@ -54,19 +70,37 @@ namespace Squaremory_Csharp
             int y = rn.Next(36);
             int z = rn.Next(36);
             int a = rn.Next(36);
+            int b = rn.Next(36);
+            int c = rn.Next(36);
+            int d = rn.Next(36);
 
             b1 = (Button)grid.Children[x];
             b2 = (Button)grid.Children[y];
             b3 = (Button)grid.Children[z];
             b4 = (Button)grid.Children[a];
-            blackButtons = new Button[4] { b1, b2, b3, b4 };
-
-            b1.Background = Brushes.Black;
-            b2.Background = Brushes.Black;
-            b3.Background = Brushes.Black;
-            b4.Background = Brushes.Black;
+            b5 = (Button)grid.Children[b];
+            b6 = (Button)grid.Children[c];
+            b7 = (Button)grid.Children[d];
+            blackButtons = new Button[7] { b1, b2, b3, b4, b5, b6, b7 };
 
 
+            img.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square5.png"));
+            img2.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square5.png"));
+            img3.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square5.png"));
+            img4.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square5.png"));
+            img5.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square5.png"));
+            img6.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square5.png"));
+            img7.Source = new BitmapImage(new Uri(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\square5.png"));
+
+
+
+            b1.Content = img;
+            b2.Content = img2;
+            b3.Content = img3;
+            b4.Content = img4;
+            b5.Content = img5;
+            b6.Content = img6;
+            b7.Content = img7;
 
 
 
@@ -96,48 +130,72 @@ namespace Squaremory_Csharp
             if (increment == 0)
             {
                 cd.Stop();
-                b1.Background = Brushes.Transparent;
-                b2.Background = Brushes.Transparent;
-                b3.Background = Brushes.Transparent;
-                b4.Background = Brushes.Transparent;
+                img.Visibility = Visibility.Collapsed;
+                img2.Visibility = Visibility.Collapsed;
+                img3.Visibility = Visibility.Collapsed;
+                img4.Visibility = Visibility.Collapsed;
+                img5.Visibility = Visibility.Collapsed;
+                img6.Visibility = Visibility.Collapsed;
+                img7.Visibility = Visibility.Collapsed;
                 MessageBox.Show("now click the squares you remember:", "Time to remember the squares");
-            }
 
+            }
 
             txttimer.Text = increment.ToString();
 
         }
 
-
-
-        private void changeBlockColour()
+        private void playSimpleSound()
         {
 
-
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\ding.wav");
+            simpleSound.Play();
         }
+
+
+
         private void blockScore(string btnName)
         {
+            if (errorcount == 3)
+            {
+                MessageBox.Show("Game Over", "Game Over");
+
+                this.Close();
+
+            }
             var window1 = new Window1();
             for (int i = 0; i < blackButtons.Length; i++)
             {
+
+                bool incorrect = blackButtons[0].Name != btnName && blackButtons[1].Name != btnName && blackButtons[2].Name != btnName && blackButtons[3].Name != btnName && blackButtons[4].Name != btnName && blackButtons[5].Name != btnName && blackButtons[6].Name != btnName;
+
                 if (blackButtons[i].Name == btnName)
                 {
                     score = score + 20;
                     score1.Text = score.ToString();
 
-                    blackButtons[i].Background = Brushes.Black;
+                    blackButtons[i].Background = Brushes.Red;
+                    playSimpleSound();
 
                 }
-                if (score == 80)
+                else if (incorrect)
                 {
-                    MessageBox.Show("congratulations you found the squares", "congratulations");
-
-                    window1.Show();
-                    this.Close();
-
+                    errorcount++;
+                    MessageBox.Show("Incorrect", "Wrong Square Clicked");
+                    break;
 
 
                 }
+
+                if (score == 140)
+                {
+                    MessageBox.Show("congratulations you found the squares", "Congartualtions");
+
+                    this.Close();
+                    break;
+
+                }
+
 
 
             }
@@ -316,10 +374,6 @@ namespace Squaremory_Csharp
             blockScore("btn36");
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(b1.Name + " " + b2.Name + " " + b3.Name + " " + b4.Name);
-        }
     }
 }
 
