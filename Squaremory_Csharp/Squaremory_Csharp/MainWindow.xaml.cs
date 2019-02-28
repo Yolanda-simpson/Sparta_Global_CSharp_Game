@@ -32,6 +32,7 @@ namespace Squaremory_Csharp
         Button b3;
         Button b4;
         Button[] blackButtons;
+        
 
 
         public MainWindow()
@@ -64,10 +65,6 @@ namespace Squaremory_Csharp
             b2.Background = Brushes.Black;
             b3.Background = Brushes.Black;
             b4.Background = Brushes.Black;
-
-
-
-           
 
         }
 
@@ -134,17 +131,18 @@ namespace Squaremory_Csharp
                     playSimpleSound();
 
                 }
+                if (blackButtons[i].Name != btnName)
+                {
+                    MessageBox.Show("incorrect", "wrong square clicked");
+                }
+
                 if (score == 80)
                 {
                     MessageBox.Show("congratulations you found the squares");
 
-                    
-
-
-
                 }
                 
-              
+
 
             }
             

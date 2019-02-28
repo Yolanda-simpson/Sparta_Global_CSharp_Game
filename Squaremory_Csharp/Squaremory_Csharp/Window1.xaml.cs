@@ -29,6 +29,7 @@ namespace Squaremory_Csharp
         Button b3;
         Button b4;
         Button[] blackButtons;
+       
 
 
         public Window1()
@@ -39,6 +40,9 @@ namespace Squaremory_Csharp
 
 
         }
+       
+  
+
         private void Startbtn_Click_1(object sender, RoutedEventArgs e)
         {
             cd.Interval = TimeSpan.FromSeconds(1);
