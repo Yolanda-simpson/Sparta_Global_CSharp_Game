@@ -131,9 +131,15 @@ namespace Squaremory_Csharp
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\ding.wav");
             simpleSound.Play();
         }
+        private void playSimpleSound2()
+        {
+
+            SoundPlayer simpleSound2 = new SoundPlayer(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\clap.wav");
+            simpleSound2.Play();
+        }
 
 
-    
+
         private void blockScore(string btnName)
         {
             if (errorcount == 3)
@@ -172,7 +178,7 @@ namespace Squaremory_Csharp
                 if (score == 80)
                 {
                     MessageBox.Show("congratulations you found the squares", "Congratuations");
-                 
+                    playSimpleSound2();
                        window1.Show();
                        this.Hide();
                         break;
