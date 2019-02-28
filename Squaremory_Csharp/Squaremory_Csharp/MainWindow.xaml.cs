@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Media;
 
 
 namespace Squaremory_Csharp
@@ -106,7 +107,13 @@ namespace Squaremory_Csharp
            
         }
 
-    
+        private void playSimpleSound()
+        {
+
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\ding.wav");
+            simpleSound.Play();
+        }
+
 
         private void changeBlockColour()
         {
@@ -124,18 +131,19 @@ namespace Squaremory_Csharp
                     score1.Text = score.ToString();
 
                     blackButtons[i].Background = Brushes.Black;
-                   
+                    playSimpleSound();
+
                 }
                 if (score == 80)
                 {
                     MessageBox.Show("congratulations you found the squares");
 
-                    window1.Show();
-                    this.Close();
+                    
 
 
 
                 }
+                
               
 
             }

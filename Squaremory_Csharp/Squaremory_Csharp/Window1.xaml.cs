@@ -126,7 +126,7 @@ namespace Squaremory_Csharp
                 }
                 if (score == 80)
                 {
-                    MessageBox.Show("congratulations you found the squares");
+                    MessageBox.Show("congratulations you found the squares", "congratulations");
 
                     window1.Show();
                     this.Close();
