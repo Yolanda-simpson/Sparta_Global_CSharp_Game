@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Media;
+using System.IO;
 
 
 namespace Squaremory_Csharp
@@ -25,8 +26,8 @@ namespace Squaremory_Csharp
     {
         DispatcherTimer cd = new DispatcherTimer();
         int score = 0;
-        int attempts = 0;
-        
+        int errorcount = 0;
+
 
         Button b1;
         Button b2;
@@ -120,6 +121,7 @@ namespace Squaremory_Csharp
             b3.Background = Brushes.Black;
             b4.Background = Brushes.Black;
 
+            //b1.Image = Image.FromFile("squares1.jpg");
         }
 
         
@@ -166,16 +168,17 @@ namespace Squaremory_Csharp
         }
 
 
-        private void changeBlockColour()
-        {
-
-
-        }
+    
         private void blockScore(string btnName)
         {
+            if (errorcount == 3)
+            {
+                MessageBox.Show("game oover");
+            }
             var window1 = new Window1();
             for (int i = 0; i < blackButtons.Length; i++)
             {
+                
                 bool incorrect = blackButtons[0].Name != btnName && blackButtons[1].Name != btnName && blackButtons[2].Name != btnName && blackButtons[3].Name != btnName;
 
                 if (blackButtons[i].Name == btnName)
@@ -189,12 +192,14 @@ namespace Squaremory_Csharp
                 }
                 else if (incorrect)
                 {
+                    errorcount++;
                     MessageBox.Show("Incorrect", "Wrong Square Clicked");
-                    
                     break;
                     
                 }
-              
+
+                
+                
                 if (score == 80)
                 {
                     MessageBox.Show("congratulations you found the squares");

@@ -7,7 +7,19 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-    <Grid Name="grid" HorizontalAlignment="Left" Height="354" VerticalAlignment="Top" Width="794" ShowGridLines="True" Margin="0,66,-0.4,0" >
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="White" Offset="0"/>
+                <GradientStop Color="#FF9D20FF" Offset="0.718"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFE7D2D2" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid Name="grid" HorizontalAlignment="Left" Height="354" VerticalAlignment="Top" Width="794" ShowGridLines="True" Margin="0,66,-0.4,0" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width = "132*"></ColumnDefinition>
             <ColumnDefinition Width = "132*"></ColumnDefinition>
