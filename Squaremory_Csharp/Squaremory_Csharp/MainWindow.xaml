@@ -214,7 +214,6 @@
         <TextBox x:Name="txttimer" Text="" HorizontalAlignment="Center" Height="35" Margin="661,13,33.6,0"  VerticalAlignment="Top" Width="99" FontSize="24" RenderTransformOrigin="0.866,0.942"/>
         <TextBox x:Name="score1" HorizontalAlignment="Left" Height="46" Margin="255,15,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="112" FontSize="22"/>
         <Label Content="Score" HorizontalAlignment="Left" Height="35" Margin="202,13,0,0" VerticalAlignment="Top" Width="140" FontSize="18"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="427,13,0,0" VerticalAlignment="Top" Width="68" Click="Button_Click"/>
 
     </Grid>
 </Window>

@@ -10,21 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-
 
 namespace Squaremory_Csharp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
         DispatcherTimer cd = new DispatcherTimer();
         int score = 0;
-        
+
 
         Button b1;
         Button b2;
@@ -33,7 +31,7 @@ namespace Squaremory_Csharp
         Button[] blackButtons;
 
 
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
             cd.Start();
@@ -66,11 +64,11 @@ namespace Squaremory_Csharp
 
 
 
-           
+
 
         }
 
-        
+
 
         public Button getGridChild(int r, int c)
         {
@@ -86,7 +84,7 @@ namespace Squaremory_Csharp
         }
 
         private int increment = 6;
-        
+
         public void myTimer_Tick(object sender, EventArgs e)
         {
             TextBlock btc1 = new TextBlock();
@@ -98,15 +96,15 @@ namespace Squaremory_Csharp
                 b2.Background = Brushes.Transparent;
                 b3.Background = Brushes.Transparent;
                 b4.Background = Brushes.Transparent;
-                MessageBox.Show("now click the squares you remember:" ,"Time to remember the squares" );
+                MessageBox.Show("now click the squares you remember:", "Time to remember the squares");
             }
-           
+
 
             txttimer.Text = increment.ToString();
-           
+
         }
 
-    
+
 
         private void changeBlockColour()
         {
@@ -124,7 +122,7 @@ namespace Squaremory_Csharp
                     score1.Text = score.ToString();
 
                     blackButtons[i].Background = Brushes.Black;
-                   
+
                 }
                 if (score == 80)
                 {
@@ -136,10 +134,10 @@ namespace Squaremory_Csharp
 
 
                 }
-              
+
 
             }
-            
+
         }
 
         private void Btn1_Click(object sender, RoutedEventArgs e)
@@ -192,7 +190,7 @@ namespace Squaremory_Csharp
         {
             blockScore("btn11");
         }
-         private void Btn12_Click(object sender, RoutedEventArgs e)
+        private void Btn12_Click(object sender, RoutedEventArgs e)
         {
             blockScore("btn12");
         }
@@ -316,10 +314,8 @@ namespace Squaremory_Csharp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(b1.Name+" "+b2.Name+" "+b3.Name+" "+b4.Name);
+            MessageBox.Show(b1.Name + " " + b2.Name + " " + b3.Name + " " + b4.Name);
         }
     }
 }
-      
-
 
