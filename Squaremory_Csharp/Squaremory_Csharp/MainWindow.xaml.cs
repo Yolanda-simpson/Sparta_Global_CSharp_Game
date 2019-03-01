@@ -51,11 +51,6 @@ namespace Squaremory_Csharp
 
         }
 
-      
-       
-
-
-
         private void Startbtn_Click_1(object sender, RoutedEventArgs e)
         {
             
@@ -85,6 +80,7 @@ namespace Squaremory_Csharp
             b3.Content = img3;
             b4.Content = img4;
 
+    
 
 
         }
@@ -113,10 +109,10 @@ namespace Squaremory_Csharp
             if (increment == 0)
             {
                 cd.Stop();
-                img.Visibility = Visibility.Collapsed;
-                img2.Visibility = Visibility.Collapsed;
-                img3.Visibility = Visibility.Collapsed;
-                img4.Visibility = Visibility.Collapsed;
+                img.Visibility = Visibility.Hidden;
+                img2.Visibility = Visibility.Hidden;
+                img3.Visibility = Visibility.Hidden;
+                img4.Visibility = Visibility.Hidden;
                 MessageBox.Show("Now click the squares you remember:" ,"Time to remember the squares" );
                 
             }
@@ -128,7 +124,7 @@ namespace Squaremory_Csharp
         private void playSimpleSound()
         {
 
-            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\ding.wav");
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\ding.wav");
             simpleSound.Play();
         }
         private void playSimpleSound2()
@@ -145,7 +141,7 @@ namespace Squaremory_Csharp
             if (errorcount == 3)
             {
                 MessageBox.Show("Game Over", "Game Over");
-                
+           
                 this.Close();
                
             }
@@ -177,7 +173,7 @@ namespace Squaremory_Csharp
                 
                 if (score == 80)
                 {
-                    MessageBox.Show("congratulations you found the squares", "Congratuations");
+                    MessageBox.Show("Congratulations you found the squares", "Congratuations");
                     playSimpleSound2();
                        window1.Show();
                        this.Hide();

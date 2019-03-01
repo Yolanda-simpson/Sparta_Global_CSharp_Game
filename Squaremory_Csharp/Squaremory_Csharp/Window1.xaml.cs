@@ -121,7 +121,7 @@ namespace Squaremory_Csharp
 
         }
 
-        private int increment = 6;
+        private int increment = 9;
 
         public void myTimer_Tick(object sender, EventArgs e)
         {
@@ -148,7 +148,7 @@ namespace Squaremory_Csharp
         private void playSimpleSound()
         {
 
-            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\ding.wav");
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week7\Sparta_Global_CSharp_Game\Squaremory_Csharp\Squaremory_Csharp\bin\ding.wav");
             simpleSound.Play();
         }
         private void playSimpleSound2()
